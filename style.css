@@ -1,0 +1,233 @@
+:root {
+    --verde-agua: rgba(0, 255, 178, 1);
+    --verde-agua-forte: rgba(50, 255, 50, 1);
+    --cinza: rgb(128, 128, 128);
+    --azul-clarinho: rgba(100, 189, 253, 0.8);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+    background-color: #000;
+    background-image: url(img/kali.jpg);
+    background-size: cover;
+    /* Faz com que a imagem cubra todo o corpo */
+    background-repeat: no-repeat;
+    /* Impede a repetição da imagem */
+    background-attachment: fixed;
+    /* Fixa a imagem de fundo */
+    background-position: center top;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.img-navbar {
+    width: 3rem;
+    margin: 1rem 1rem 0.5rem 2rem;
+}
+
+.navbar-logo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-btn {
+    text-decoration: none;
+    padding: 2rem 2rem 2rem 2rem;
+    transition: 0.25s all linear;
+}
+
+.navbar-btn:hover {
+    background-color: rgba(65, 65, 65, 0.6);
+}
+
+.navbar-search-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+.navbar-search-login input {
+    margin-right: 5rem;
+    border-radius: 5px;
+    padding: 0.6rem;
+    width: 15rem;
+    height: 1.8rem;
+    outline: none;
+    color: #000;
+}
+
+.navbar-search-login img {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login {
+    transition: opacity 0.3s linear;
+}
+
+.navbar-search-login a {
+    padding: 0;
+    cursor: default;
+}
+
+/*--------------------------------------------------
+---------------------main---------------------------
+----------------------------------------------------*/
+
+.attack-defender img {
+    height: 4rem;
+    margin-right: 1.5rem;
+}
+
+.attack-defender {
+    display: flex;
+    gap: 2rem;
+    min-width: 100vw;
+    justify-content: center;
+    position: relative;
+}
+
+.arrow-left {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(to right top,
+            var(--verde-agua-forte) 50%,
+            transparent 50%);
+    top: 3.5rem;
+    right: 50.6vw;
+    transform: rotate(45deg);
+}
+
+.arrow-right {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(to bottom left,
+            var(--verde-agua-forte) 50%,
+            transparent 50%);
+    top: 3.5rem;
+    right: 48.6vw;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+.attack {
+    display: flex;
+    justify-content: right;
+    background-image: linear-gradient(to right,
+            var(--verde-agua) 80%,
+            rgba(0, 0, 0, 0.2));
+    height: min-content;
+    margin-top: 2rem;
+    min-width: 20vw;
+}
+
+.attack-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.attack-stats p {
+    text-align: right;
+}
+
+.attack-stats span {
+    margin-top: 0.6rem;
+}
+
+.attack-stats-text {
+    padding-right: 0.6rem;
+    color: black;
+}
+
+.defender {
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    background-color: var(--cinza);
+    height: min-content;
+    margin-top: 2rem;
+    min-width: 20vw;
+}
+
+.defender-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.defender-stats p {
+    text-align: left;
+}
+
+.defender-stats span {
+    margin-top: 0.6rem;
+}
+
+.defender-stats-text {
+    padding-right: 0.6rem;
+    color: black;
+}
+
+.load {
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    border: 10px solid white ;
+    border-radius: 100%;
+    top: 80%;
+    right: 2%;
+    animation: circle .8s linear infinite;
+}
+
+.load-r6 {
+    font-size: 4rem;
+    position: relative;
+    top: 20%;
+    left: 20%;
+}
+
+
+@keyframes circle {
+    0% {
+        border-left: 10px solid black;
+        /* Aumenta a borda esquerda */
+    }
+
+    33.3% {
+        border-top: 10px solid black;
+        /* Adiciona a borda superior */
+    }
+
+    66.6% {
+        border-right: 10px solid black;
+        /* Adiciona a borda direita */
+    }
+    100% {
+        border-bottom: 10px solid black;
+        /* Finaliza com a borda inferior */
+    }
+    
+}
